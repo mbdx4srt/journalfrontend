@@ -1,3 +1,15 @@
 export default function AuthenticatedApp(props){
-    return <h1> You are logged in </h1>
+
+    function logout(){
+        localStorage.removeItem("jwt")
+        props.onLogout()
+
+    }
+
+    return (
+     <>
+        <h1> You are logged in </h1>
+         <button onClick={logout}>Logout</button>
+     </>
+    )
 }

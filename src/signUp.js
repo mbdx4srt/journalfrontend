@@ -34,6 +34,7 @@ export default function SignUp(props) {
             if (response2.ok) {
                 const jwt = await response2.text();
                 localStorage.setItem('jwt', jwt)
+                props.onLogin();
             }
         }}
 

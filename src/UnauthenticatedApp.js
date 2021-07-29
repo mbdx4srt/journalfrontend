@@ -4,7 +4,7 @@ export default function UnauthenticatedApp(props){
     return(
         <>
         <h1> You are not logged in </h1>
-            <SignUp />
+            <SignUp onLogin={props.onLogin}/>
         </>
 )
 }
